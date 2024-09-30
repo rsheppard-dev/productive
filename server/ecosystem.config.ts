@@ -2,7 +2,7 @@ module.exports = {
 	apps: [
 		{
 			name: 'projective',
-			script: 'npm',
+			script: 'pnpm',
 			args: 'run dev',
 			env: {
 				NODE_ENV: 'development',
