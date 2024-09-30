@@ -7,6 +7,9 @@ const { Pool } = pg;
 
 const pool = new Pool({
 	connectionString: env.DATABASE_URL,
+	ssl: {
+		rejectUnauthorized: false,
+	},
 });
 
 const db = drizzle(pool, { schema });
