@@ -11,6 +11,9 @@ export default defineConfig({
 		user: env.DB_USER,
 		password: env.DB_PASSWORD,
 		database: env.DB_NAME,
+		ssl: {
+			rejectUnauthorized: env.NODE_ENV === 'production',
+		},
 	},
 	verbose: true,
 	strict: true,

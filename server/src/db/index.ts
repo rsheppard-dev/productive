@@ -11,7 +11,9 @@ const pool = new Pool({
 	user: env.DB_USER,
 	password: env.DB_PASSWORD,
 	database: env.DB_NAME,
-	ssl: true,
+	ssl: {
+		rejectUnauthorized: env.NODE_ENV === 'production',
+	},
 });
 
 const db = drizzle(pool, { schema });
