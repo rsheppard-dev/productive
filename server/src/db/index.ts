@@ -6,10 +6,11 @@ import * as schema from './schema';
 const { Pool } = pg;
 
 const pool = new Pool({
-	connectionString: env.DATABASE_URL,
-	ssl: {
-		rejectUnauthorized: false,
-	},
+	host: env.DB_HOST,
+	port: env.DB_PORT,
+	user: env.DB_USER,
+	password: env.DB_PASSWORD,
+	database: env.DB_NAME,
 });
 
 const db = drizzle(pool, { schema });
