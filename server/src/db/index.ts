@@ -12,7 +12,7 @@ const pool = new Pool({
 	password: env.DB_PASSWORD,
 	database: env.DB_NAME,
 	ssl: {
-		rejectUnauthorized: false,
+		rejectUnauthorized: env.NODE_ENV === 'production',
 	},
 });
 
