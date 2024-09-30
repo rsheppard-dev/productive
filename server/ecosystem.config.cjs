@@ -1,7 +1,7 @@
 module.exports = {
 	apps: [
 		{
-			name: 'projective',
+			name: 'productive',
 			script: 'pnpm',
 			args: 'run dev',
 			env: {
