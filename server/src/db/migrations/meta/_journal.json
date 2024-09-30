@@ -1,0 +1,34 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1727276588002,
+      "tag": "0000_vengeful_master_chief",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1727282450781,
+      "tag": "0001_aberrant_lorna_dane",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1727283047987,
+      "tag": "0002_slim_shotgun",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1727507660306,
+      "tag": "0003_daffy_ted_forrester",
+      "breakpoints": true
+    }
+  ]
+}
