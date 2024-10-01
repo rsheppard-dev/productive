@@ -1,12 +1,7 @@
 import { eq } from 'drizzle-orm';
 import db from '../db';
 import { tasks } from '../db/schema';
-import type {
-	InsertTaskSchema,
-	SelectTaskSchema,
-	StatusEnum,
-	statusEnum,
-} from '../db/schema/tasks.schema';
+import type { InsertTaskSchema, StatusEnum } from '../db/schema/tasks.schema';
 
 export async function getTasks(projectId: number) {
 	const data = await db.query.tasks.findMany({

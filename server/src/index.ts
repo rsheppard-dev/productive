@@ -4,7 +4,7 @@ import morgan from 'morgan';
 import helmet from 'helmet';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import { projectRoutes, taskRoutes } from './routes';
+import { projectRoutes, taskRoutes, userRoutes } from './routes';
 
 dotenv.config();
 
@@ -24,6 +24,7 @@ app.get('/api/healthcheck', (_, res) => {
 
 app.use('/api/projects', projectRoutes);
 app.use('/api/tasks', taskRoutes);
+app.use('/api/users', userRoutes);
 
 const port = process.env.PORT || 8000;
 
