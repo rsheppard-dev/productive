@@ -2,7 +2,7 @@ import Header from "@/components/header";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Filter, Search, Share2 } from "lucide-react";
-import ProjectTabs from "./ProjectTabs";
+import ProjectTabs from "./projectTabs";
 
 export default function ProjectHeader({ id }: { id: number }) {
   return (
