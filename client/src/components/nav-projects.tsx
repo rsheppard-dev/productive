@@ -21,7 +21,7 @@ import {
   CollapsibleTrigger,
 } from "./ui/collapsible";
 import { SidebarLabel } from "./ui/sidebar";
-import { Project } from "@/lib/features/api";
+import { Project } from "@/types/project";
 
 export function NavProjects({
   projects,
