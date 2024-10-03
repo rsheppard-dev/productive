@@ -22,6 +22,8 @@ export default function Navbar() {
     }
   }
 
+  console.log(currentUser);
+
   const currentUserDetails = currentUser?.userDetails;
   return (
     <nav className="mb-10 flex items-center justify-between">
@@ -48,13 +50,13 @@ export default function Navbar() {
         <Avatar>
           <AvatarImage
             src={currentUserDetails?.profilePictureUrl}
-            alt={currentUserDetails?.username ?? "User profile picture"}
+            alt={currentUser?.user.username ?? "User profile picture"}
           />
           <AvatarFallback>
             <UserIcon />
           </AvatarFallback>
         </Avatar>
-        <Badge className="mx-3">{currentUserDetails?.username}</Badge>
+        <Badge className="mx-3">{currentUser?.user?.username}</Badge>
         <Button onClick={handleSignOut} variant="outline" size="icon">
           <LogOut className="h-[1.2rem] w-[1.2rem]" />
         </Button>

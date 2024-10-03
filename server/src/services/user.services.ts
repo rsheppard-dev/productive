@@ -22,3 +22,12 @@ export async function getUser(cognitoId: string) {
 
 	return data;
 }
+
+export async function deleteUser(cognitoId: string) {
+	const data = await db
+		.delete(users)
+		.where(eq(users.cognitoId, cognitoId))
+		.returning();
+
+	return data;
+}

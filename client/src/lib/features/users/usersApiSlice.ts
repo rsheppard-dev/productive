@@ -16,6 +16,7 @@ export const usersApiSlice = apiSlice.injectEndpoints({
           //   const { accessToken } = session.tokens ?? {};
 
           const userDetailsResponse = await fetchWithBQ(`/users/${userSub}`);
+          console.log(userDetailsResponse);
           const userDetails = userDetailsResponse.data as User;
 
           return { data: { user, userSub, userDetails } };
