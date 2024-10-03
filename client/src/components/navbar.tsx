@@ -50,7 +50,7 @@ export default function Navbar() {
         <Avatar>
           <AvatarImage
             src={currentUserDetails?.profilePictureUrl}
-            alt={currentUser?.user.username ?? "User profile picture"}
+            alt={currentUser?.user?.username ?? "User profile picture"}
           />
           <AvatarFallback>
             <UserIcon />

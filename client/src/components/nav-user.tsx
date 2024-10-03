@@ -35,13 +35,13 @@ export function NavUser({ user }: { user: User }) {
           <Avatar className="h-7 w-7 rounded-md border">
             <AvatarImage
               src={user?.profilePictureUrl}
-              alt={user.username}
+              alt={user?.username}
               className="animate-in fade-in-50 zoom-in-90"
             />
             <AvatarFallback className="rounded-md">CN</AvatarFallback>
           </Avatar>
           <div className="grid flex-1 leading-none">
-            <div className="font-medium">{user.username}</div>
+            <div className="font-medium">{user?.username}</div>
             <div className="overflow-hidden text-xs text-muted-foreground">
               <div className="line-clamp-1">{user.email}</div>
             </div>
@@ -58,11 +58,11 @@ export function NavUser({ user }: { user: User }) {
         <DropdownMenuLabel className="p-0 font-normal">
           <div className="flex items-center gap-2 px-1 py-1.5 text-left text-sm transition-all">
             <Avatar className="h-7 w-7 rounded-md">
-              <AvatarImage src={user?.profilePictureUrl} alt={user.username} />
+              <AvatarImage src={user?.profilePictureUrl} alt={user?.username} />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
             <div className="grid flex-1">
-              <div className="font-medium">{user.username}</div>
+              <div className="font-medium">{user?.username}</div>
               <div className="overflow-hidden text-xs text-muted-foreground">
                 <div className="line-clamp-1">{user.email}</div>
               </div>
