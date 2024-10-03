@@ -36,6 +36,7 @@ import {
 import { TeamSwitcher } from "./team-switcher";
 import { NavPriority } from "./nav-priority";
 import { useGetProjectsQuery } from "@/lib/features/projects/projectsApiSlice";
+import { useGetAuthUserQuery } from "@/lib/features/users/usersApiSlice";
 
 const data = {
   teams: [
@@ -183,6 +184,7 @@ const data = {
 
 export function AppSidebar() {
   const { data: projects } = useGetProjectsQuery();
+  const { data: currentUser } = useGetAuthUserQuery({});
   return (
     <Sidebar>
       <SidebarHeader>
@@ -205,7 +207,7 @@ export function AppSidebar() {
         </SidebarItem>
       </SidebarContent>
       <SidebarFooter>
-        <NavUser user={data.user} />
+        {!!currentUser && <NavUser user={currentUser.userDetails} />}
       </SidebarFooter>
     </Sidebar>
   );

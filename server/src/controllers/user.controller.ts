@@ -1,6 +1,6 @@
 import { faker } from '@faker-js/faker';
 import type { Request, Response } from 'express';
-import { createUser, getUsers } from '../services/user.services';
+import { createUser, getUser, getUsers } from '../services/user.services';
 import type { InsertUserSchema } from '../db/schema/users.schema';
 
 export async function createUserHandler(
@@ -39,5 +39,21 @@ export async function getUsersHandler(req: Request, res: Response) {
 	} catch (error: any) {
 		console.error(error);
 		res.status(500).json({ message: `Error fetching users: ${error.message}` });
+	}
+}
+
+export async function getUserHandler(
+	req: Request<{ cognitoId: string }>,
+	res: Response
+) {
+	try {
+		const { cognitoId } = req.params;
+
+		const user = await getUser(cognitoId);
+
+		res.status(200).json({ user });
+	} catch (error: any) {
+		console.error(error);
+		res.status(500).json({ message: `Error fetching user: ${error.message}` });
 	}
 }
